@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { JeuCard } from '../jeu-card/jeu-card';
 
 @Component({
   selector: 'app-liste-jeux',
-  imports: [],
+  imports: [ JeuCard ],
   templateUrl: './liste-jeux.html',
   styleUrl: './liste-jeux.css',
 })
