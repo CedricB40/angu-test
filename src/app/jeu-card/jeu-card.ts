@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, input } from '@angular/core';
 
 @Component({
   selector: 'app-jeu-card',
@@ -8,11 +8,12 @@ import { Component, signal } from '@angular/core';
 })
 
 export class JeuCard {
-  titre = signal('Mon 1er jeu');
+  titre = input<string>('');
 
-  statut = signal('en cours');
+  statut = input<string>('termine');
   
-  favori = signal(false);
+  favori = input<boolean>(false);
 
-  genres = ['Action', 'Aventure', 'RPG'];
+  genres = input<string[]>([]);
+
 }
