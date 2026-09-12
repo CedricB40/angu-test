@@ -18,7 +18,7 @@
     <p>Statut inconnu</p>
   }
 }
-
+<p>Statut via pipe : {{ statut() | statutAffichage }}</p>
 <!-- le signal qui regarde si le jeu est dans les favoris -->
 @if (favori()) {
     <p>Favori</p>

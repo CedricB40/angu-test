@@ -1,8 +1,10 @@
-import { Component, signal, input } from '@angular/core';
+import { Component, 
+  input } from '@angular/core';
+import { StatutAffichagePipe } from '../statut-affichage-pipe';
 
 @Component({
   selector: 'app-jeu-card',
-  imports: [],
+  imports: [StatutAffichagePipe],
   templateUrl: './jeu-card.html',
   styleUrl: './jeu-card.css',
 })
