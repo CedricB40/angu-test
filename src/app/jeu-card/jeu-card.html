@@ -1,1 +1,34 @@
-<h1>Mon 1er jeu</h1>
+<!-- le titre du jeu -->
+
+<h1>{{ titre() }}</h1>
+
+
+<!-- le signal qui agit sur le statut du jeu -->
+@switch (statut()) {
+  @case ('termine') {
+    <p>Jeu terminé</p>
+  }
+    @case ('en cours') {
+    <p>En cours</p>
+  }
+    @case ('a faire') {
+    <p>A faire</p>
+  }
+    @default {
+    <p>Statut inconnu</p>
+  }
+}
+
+<!-- le signal qui regarde si le jeu est dans les favoris -->
+@if (favori()) {
+    <p>Favori</p>
+}@else {
+    <p>Non favori</p>
+}
+
+<!-- boucle qui va lire le contenu du tableau de genre -->
+
+@for (genre of genres; track genre) {
+  <p>{{ genre }}</p>
+}
+
