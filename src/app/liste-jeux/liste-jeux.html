@@ -1,7 +1,8 @@
 <h2>Liste de jeux</h2>
 
-
-
 @for (jeu of jeuxService.catalogue; track jeu.titre) {
     <app-jeu-card [titre]="jeu.titre" [favori]="jeu.favori" [genres]="jeu.genres" [statut]="jeu.statut"></app-jeu-card>
 }
+
+<input [(ngModel)]="nouveauTitre" placeholder="Un nouveau jeu ?">
+<button (click)="ajouterJeu()">Enregistrer</button>
