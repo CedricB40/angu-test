@@ -15,12 +15,15 @@ export class ListeJeux {
   nouveauTitre = '';
 
   ajouterJeu() {
-    this.jeuxService.catalogue.push({
-      titre: this.nouveauTitre,
-      statut: 'a faire',
-      favori: false,
-      genres: [],
-    });
+    this.jeuxService.catalogue.update(anciensJeux => [
+      ...anciensJeux,
+      {
+        titre: this.nouveauTitre,
+        statut: 'a faire',
+        favori: false,
+        genres: [],
+      }
+    ]);
     this.nouveauTitre = '';
   }
 }
