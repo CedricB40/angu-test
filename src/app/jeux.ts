@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class Jeux { 
 
-  catalogue = 
+  catalogue =  signal(
   [
 
   { titre: 'Zelda', statut: 'termine', favori: false, genres: ['Action', 'RPG'] },
@@ -13,6 +13,6 @@ export class Jeux {
   { titre: 'Pac-Man', statut: 'a faire', favori: false, genres: ['Arcade'] },
   { titre: 'Tetris', statut: 'en cours', favori: true, genres: ['Puzzle'] },
 
-  ];
+  ]);
 
 }
