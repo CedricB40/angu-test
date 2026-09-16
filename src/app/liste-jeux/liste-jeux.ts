@@ -26,4 +26,10 @@ export class ListeJeux {
     ]);
     this.nouveauTitre = '';
   }
+
+  supprimerJeu(titre: string) {
+    this.jeuxService.catalogue.update(anciensJeux =>
+      anciensJeux.filter(jeu => jeu.titre !== titre)
+    );
+  }
 }
